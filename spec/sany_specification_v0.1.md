@@ -280,14 +280,15 @@ export func process_data() { ... }
 export const timeout = 30
 ```
 
-### 14.2. Module Loading
-Code is modularized across files and standard libraries:
+### 14.2. Module Loading (Decentralized)
+Sany uses a decentralized package management model, importing modules directly via their Git repository URLs, allowing a zero-infrastructure ecosystem (similar to Go and Deno). Standard libraries use short names:
 ```sany
+// Standard library imports
 import "http"
-import "json"
-
-// Selective import
 import { get, post } from "http"
+
+// Third-party decentralized imports
+import "github.com/euraphhh/sany/x/math"
 ```
 
 ---
