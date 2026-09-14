@@ -39,6 +39,9 @@ import
 export func foo
 error null
 and or not
+4.7;
+"hello sany";
+// this is a comment
 `
 
 	tests := []struct {
@@ -147,6 +150,10 @@ and or not
 		{token.AND, "and"},
 		{token.OR, "or"},
 		{token.NOT, "not"},
+		{token.FLOAT, "4.7"},
+		{token.SEMICOLON, ";"},
+		{token.STRING, "hello sany"},
+		{token.SEMICOLON, ";"},
 
 		{token.EOF, ""},
 	}
